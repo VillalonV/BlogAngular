@@ -1,0 +1,9 @@
+<div *ngFor="let post of posts">
+  <h3>{{ post.title }}</h3>
+  <p>{{ post.content }}</p>
+  <small>{{ post.createdAt | date }}</small>
+  <hr>
+</div>
+
+<app-post-form (onSubmit)="addPost($event)"></app-post-form>
+<app-post-list [posts]="posts"></app-post-list>
